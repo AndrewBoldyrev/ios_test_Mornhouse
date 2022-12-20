@@ -15,6 +15,7 @@
 		09495DE82951C96B006F66DE /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09495DE72951C96B006F66DE /* DetailView.swift */; };
 		09495DEB2951CBBE006F66DE /* Numbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09495DEA2951CBBE006F66DE /* Numbers.swift */; };
 		09495DEE2951EEFB006F66DE /* TextImputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09495DED2951EEFB006F66DE /* TextImputField.swift */; };
+		09495DF4295247FC006F66DE /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09495DF3295247FC006F66DE /* Constant.swift */; };
 		D7F19201F528110A958252B2 /* Pods_ios_test_Mornhouse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C50B41A1AF95D07B435E5C4 /* Pods_ios_test_Mornhouse.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,7 @@
 		09495DE72951C96B006F66DE /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		09495DEA2951CBBE006F66DE /* Numbers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Numbers.swift; sourceTree = "<group>"; };
 		09495DED2951EEFB006F66DE /* TextImputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextImputField.swift; sourceTree = "<group>"; };
+		09495DF3295247FC006F66DE /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		2C50B41A1AF95D07B435E5C4 /* Pods_ios_test_Mornhouse.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_test_Mornhouse.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		82D4BF6EE2542642E098A6BD /* Pods-ios_test_Mornhouse.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios_test_Mornhouse.debug.xcconfig"; path = "Target Support Files/Pods-ios_test_Mornhouse/Pods-ios_test_Mornhouse.debug.xcconfig"; sourceTree = "<group>"; };
 		E789EBB88001479A32411DAC /* Pods-ios_test_Mornhouse.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios_test_Mornhouse.release.xcconfig"; path = "Target Support Files/Pods-ios_test_Mornhouse/Pods-ios_test_Mornhouse.release.xcconfig"; sourceTree = "<group>"; };
@@ -67,14 +69,13 @@
 		09495DD52951C840006F66DE /* ios_test_Mornhouse */ = {
 			isa = PBXGroup;
 			children = (
+				09495DF129523406006F66DE /* Screens */,
 				09495DEC2951EEE6006F66DE /* UI Elements */,
 				09495DE92951CBA2006F66DE /* Models */,
-				09495DE62951C923006F66DE /* ios-test-Mornhouse-Info.plist */,
-				09495DD62951C840006F66DE /* ios_test_MornhouseApp.swift */,
-				09495DD82951C840006F66DE /* ContentView.swift */,
-				09495DDA2951C842006F66DE /* Assets.xcassets */,
 				09495DDC2951C842006F66DE /* Preview Content */,
-				09495DE72951C96B006F66DE /* DetailView.swift */,
+				09495DF2295247E5006F66DE /* Resources */,
+				09495DD62951C840006F66DE /* ios_test_MornhouseApp.swift */,
+				09495DE62951C923006F66DE /* ios-test-Mornhouse-Info.plist */,
 			);
 			path = ios_test_Mornhouse;
 			sourceTree = "<group>";
@@ -102,6 +103,24 @@
 				09495DED2951EEFB006F66DE /* TextImputField.swift */,
 			);
 			path = "UI Elements";
+			sourceTree = "<group>";
+		};
+		09495DF129523406006F66DE /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				09495DD82951C840006F66DE /* ContentView.swift */,
+				09495DE72951C96B006F66DE /* DetailView.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		09495DF2295247E5006F66DE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				09495DDA2951C842006F66DE /* Assets.xcassets */,
+				09495DF3295247FC006F66DE /* Constant.swift */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		55A0F221381B7FE1EDFE514F /* Frameworks */ = {
@@ -235,6 +254,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09495DF4295247FC006F66DE /* Constant.swift in Sources */,
 				09495DD92951C840006F66DE /* ContentView.swift in Sources */,
 				09495DE82951C96B006F66DE /* DetailView.swift in Sources */,
 				09495DEE2951EEFB006F66DE /* TextImputField.swift in Sources */,
@@ -376,8 +396,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -410,8 +430,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

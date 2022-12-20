@@ -12,7 +12,6 @@ struct ContentView: View {
     @State private var showingAlert = false
     @State var number: String = ""
     @StateObject var viewModel = ViewModel()
-    var random = "random/math"
     
     @ObservedResults(NumbersModel.self) var numbersList
     @ObservedRealmObject var numList : NumbersModel
@@ -23,18 +22,21 @@ struct ContentView: View {
                 VStack {
                     TextInputField(placeHolder: "Enter any number" , textValue: $number)
                         .keyboardType(.numberPad)
-                        .multilineTextAlignment(.leading)
-                     //  Spacer()
-                    NavigationLink(destination: DetailView(num: number, numList: numList ), label: {
-                        Text("Search Number")
-                            .padding()
-                    })
-                    .disabled(number == "")
-
+                        .multilineTextAlignment(.center)
+                    //  Spacer()
                     Button {
                     } label: {
-                        NavigationLink(destination: DetailView(num: random, numList: numList), label: {
-                            Text("Rundom Number")
+                        NavigationLink(destination: DetailView(num: number, numList: numList ), label: {
+                            Text(Constant.getFactBT)
+                                .padding()
+                        })
+                        .disabled(number == "")
+                    }
+                    
+                    Button {
+                    } label: {
+                        NavigationLink(destination: DetailView(num: Constant.randomURL, numList: numList), label: {
+                            Text(Constant.randomFactBT)
                                 .padding()
                         })
                     }
@@ -53,7 +55,7 @@ struct ContentView: View {
                         .lineLimit(2)
                 }
             }
-            .navigationTitle("Numbers")
+            .navigationTitle(Constant.navBarTitle)
             .onAppear{
                 number = ""
             }

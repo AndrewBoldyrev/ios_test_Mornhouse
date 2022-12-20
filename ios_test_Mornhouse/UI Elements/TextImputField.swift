@@ -13,11 +13,12 @@ struct TextInputField: View {
     @Binding var textValue: String
     
     var body: some View {
-        ZStack(alignment: .leading) {
+        ZStack(alignment: .center) {
             Text(placeHolder)
                 .foregroundColor(Color(.placeholderText))
                 .offset(y: textValue.isEmpty ? 0 : -25)
                 .scaleEffect(textValue.isEmpty ? 1: 0.8, anchor: .leading)
+                .multilineTextAlignment(.center)
             TextField("", text: $textValue)
         }
         .padding(.top, textValue.isEmpty ? 0 : 15)

@@ -13,27 +13,30 @@ struct DetailView: View {
     
     @StateObject var viewModel = ViewModel()
     @State var num : String = ""
-    @State var numStory : String = ""
     
     @ObservedRealmObject var numList : NumbersModel
     @ObservedResults(NumbersModel.self) var numbersList
     
     var body: some View {
         NavigationView {
-           List {
-               if num == "" {
-                   Text(String(numList.number))
-                   Text(numList.detailText)
-               } else {
-                   ForEach(viewModel.numbers, id: \.self) {
-                       n in
-                       VStack {
-                           Text(String(n.number)).font(.headline)
-                           Divider()
-                           Text(n.text)
-                       }
-                   }
-               }
+            List {
+                if num == "" {
+                    VStack {
+                        Text(String(numList.number))
+                            .font(.headline)
+                        Divider()
+                        Text(numList.detailText)
+                    }
+                } else {
+                    ForEach(viewModel.numbers, id: \.self) {
+                        n in
+                        VStack {
+                            Text(String(n.number)).font(.headline)
+                            Divider()
+                            Text(n.text)
+                        }
+                    }
+                }
             }
             .navigationBarTitle("Detail", displayMode: .inline)
             .onAppear{
