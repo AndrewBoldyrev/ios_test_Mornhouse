@@ -16,8 +16,8 @@ class ViewModel: ObservableObject {
     @Published var numbers = [Numbers]()
     
     func fetchData(n: String) {
-        guard let url = URL(string: "http://numbersapi.com/\(n)/?json") else {  return
-        }
+        guard let url = URL(string: "http://numbersapi.com/\(n)/?json") else { return }
+        
         let task = URLSession.shared.dataTask(with: url) { [weak self] data, _, error in
             guard let data = data , error == nil else { return }
             do {

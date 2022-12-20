@@ -13,6 +13,7 @@
 		09495DDE2951C842006F66DE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09495DDD2951C842006F66DE /* Preview Assets.xcassets */; };
 		09495DE52951C8E8006F66DE /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09495DE42951C8E8006F66DE /* ViewModel.swift */; };
 		09495DE82951C96B006F66DE /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09495DE72951C96B006F66DE /* DetailView.swift */; };
+		09495DEB2951CBBE006F66DE /* Numbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09495DEA2951CBBE006F66DE /* Numbers.swift */; };
 		D7F19201F528110A958252B2 /* Pods_ios_test_Mornhouse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C50B41A1AF95D07B435E5C4 /* Pods_ios_test_Mornhouse.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,7 @@
 		09495DE42951C8E8006F66DE /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		09495DE62951C923006F66DE /* ios-test-Mornhouse-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "ios-test-Mornhouse-Info.plist"; sourceTree = SOURCE_ROOT; };
 		09495DE72951C96B006F66DE /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		09495DEA2951CBBE006F66DE /* Numbers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Numbers.swift; sourceTree = "<group>"; };
 		2C50B41A1AF95D07B435E5C4 /* Pods_ios_test_Mornhouse.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_test_Mornhouse.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		82D4BF6EE2542642E098A6BD /* Pods-ios_test_Mornhouse.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios_test_Mornhouse.debug.xcconfig"; path = "Target Support Files/Pods-ios_test_Mornhouse/Pods-ios_test_Mornhouse.debug.xcconfig"; sourceTree = "<group>"; };
 		E789EBB88001479A32411DAC /* Pods-ios_test_Mornhouse.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios_test_Mornhouse.release.xcconfig"; path = "Target Support Files/Pods-ios_test_Mornhouse/Pods-ios_test_Mornhouse.release.xcconfig"; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 		09495DD52951C840006F66DE /* ios_test_Mornhouse */ = {
 			isa = PBXGroup;
 			children = (
+				09495DE92951CBA2006F66DE /* Models */,
 				09495DE62951C923006F66DE /* ios-test-Mornhouse-Info.plist */,
 				09495DD62951C840006F66DE /* ios_test_MornhouseApp.swift */,
 				09495DD82951C840006F66DE /* ContentView.swift */,
@@ -82,6 +85,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		09495DE92951CBA2006F66DE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				09495DEA2951CBBE006F66DE /* Numbers.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		55A0F221381B7FE1EDFE514F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -96,7 +107,6 @@
 				82D4BF6EE2542642E098A6BD /* Pods-ios_test_Mornhouse.debug.xcconfig */,
 				E789EBB88001479A32411DAC /* Pods-ios_test_Mornhouse.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -216,6 +226,7 @@
 			files = (
 				09495DD92951C840006F66DE /* ContentView.swift in Sources */,
 				09495DE82951C96B006F66DE /* DetailView.swift in Sources */,
+				09495DEB2951CBBE006F66DE /* Numbers.swift in Sources */,
 				09495DE52951C8E8006F66DE /* ViewModel.swift in Sources */,
 				09495DD72951C840006F66DE /* ios_test_MornhouseApp.swift in Sources */,
 			);

@@ -7,17 +7,19 @@
 
 import Foundation
 import SwiftUI
+import RealmSwift
 
 struct DetailView: View {
     
     @StateObject var viewModel = ViewModel()
     @State var num : String = ""
+    @State var numStory : String = ""
     
-  //  @ObservedResults(NumbersModel.self) var numbersList
+    @ObservedResults(NumbersModel.self) var numbersList
     
     var body: some View {
         NavigationView {
-            List{
+            List {
                 ForEach(viewModel.numbers, id: \.self) {
                     n in
                     VStack {
@@ -29,16 +31,21 @@ struct DetailView: View {
             }
             .navigationBarTitle("Detail", displayMode: .inline)
             .onAppear{
-                viewModel.fetchData(n: num)
+                if num != "" {
+                    viewModel.fetchData(n: num)
+                } else {
+                    viewModel.fetchData(n: numStory)
+                }
             }
             .onDisappear{
-//               let numbersList = NumbersModel()
-//                for n in viewModel.numbers {
-//                    numbersList.number = n.number
-//                    numbersList.detailText = n.text
-//                    print(numbersList.number)
-//                    $numbersList.append(numbersList)
-//                }
+                let numbersList = NumbersModel()
+                for n in viewModel.numbers {
+                    numbersList.number = n.number
+                    numbersList.detailText = n.text
+                    if num != "" {
+                        $numbersList.append(numbersList)
+                    }
+                }
             }
         }
     }
