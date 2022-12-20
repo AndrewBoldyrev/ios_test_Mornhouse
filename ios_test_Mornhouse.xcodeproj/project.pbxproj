@@ -13,6 +13,7 @@
 		09495DDE2951C842006F66DE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09495DDD2951C842006F66DE /* Preview Assets.xcassets */; };
 		09495DE52951C8E8006F66DE /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09495DE42951C8E8006F66DE /* ViewModel.swift */; };
 		09495DE82951C96B006F66DE /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09495DE72951C96B006F66DE /* DetailView.swift */; };
+		D7F19201F528110A958252B2 /* Pods_ios_test_Mornhouse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C50B41A1AF95D07B435E5C4 /* Pods_ios_test_Mornhouse.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,9 @@
 		09495DE42951C8E8006F66DE /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		09495DE62951C923006F66DE /* ios-test-Mornhouse-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "ios-test-Mornhouse-Info.plist"; sourceTree = SOURCE_ROOT; };
 		09495DE72951C96B006F66DE /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		2C50B41A1AF95D07B435E5C4 /* Pods_ios_test_Mornhouse.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_test_Mornhouse.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		82D4BF6EE2542642E098A6BD /* Pods-ios_test_Mornhouse.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios_test_Mornhouse.debug.xcconfig"; path = "Target Support Files/Pods-ios_test_Mornhouse/Pods-ios_test_Mornhouse.debug.xcconfig"; sourceTree = "<group>"; };
+		E789EBB88001479A32411DAC /* Pods-ios_test_Mornhouse.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios_test_Mornhouse.release.xcconfig"; path = "Target Support Files/Pods-ios_test_Mornhouse/Pods-ios_test_Mornhouse.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7F19201F528110A958252B2 /* Pods_ios_test_Mornhouse.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				09495DD52951C840006F66DE /* ios_test_Mornhouse */,
 				09495DD42951C840006F66DE /* Products */,
+				EA0A868341F7274FD2C51508 /* Pods */,
+				55A0F221381B7FE1EDFE514F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -75,6 +82,24 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		55A0F221381B7FE1EDFE514F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2C50B41A1AF95D07B435E5C4 /* Pods_ios_test_Mornhouse.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EA0A868341F7274FD2C51508 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				82D4BF6EE2542642E098A6BD /* Pods-ios_test_Mornhouse.debug.xcconfig */,
+				E789EBB88001479A32411DAC /* Pods-ios_test_Mornhouse.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -82,9 +107,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 09495DE12951C842006F66DE /* Build configuration list for PBXNativeTarget "ios_test_Mornhouse" */;
 			buildPhases = (
+				9D50E7DC4C150E8CB878F952 /* [CP] Check Pods Manifest.lock */,
 				09495DCF2951C840006F66DE /* Sources */,
 				09495DD02951C840006F66DE /* Frameworks */,
 				09495DD12951C840006F66DE /* Resources */,
+				20732D30616CF9A3404A3F1F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -139,6 +166,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		20732D30616CF9A3404A3F1F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ios_test_Mornhouse/Pods-ios_test_Mornhouse-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ios_test_Mornhouse/Pods-ios_test_Mornhouse-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ios_test_Mornhouse/Pods-ios_test_Mornhouse-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9D50E7DC4C150E8CB878F952 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ios_test_Mornhouse-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		09495DCF2951C840006F66DE /* Sources */ = {
@@ -271,6 +340,7 @@
 		};
 		09495DE22951C842006F66DE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 82D4BF6EE2542642E098A6BD /* Pods-ios_test_Mornhouse.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -304,6 +374,7 @@
 		};
 		09495DE32951C842006F66DE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E789EBB88001479A32411DAC /* Pods-ios_test_Mornhouse.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
