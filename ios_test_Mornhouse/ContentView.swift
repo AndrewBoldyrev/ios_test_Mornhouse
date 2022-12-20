@@ -12,28 +12,28 @@ struct ContentView: View {
     @State private var showingAlert = false
     @State var number: String = ""
     @StateObject var viewModel = ViewModel()
-    var random = "random"
+    var random = "random/math"
     
     @ObservedResults(NumbersModel.self) var numbersList
+    @ObservedRealmObject var numList : NumbersModel
     
     var body: some View {
         NavigationView {
             VStack {
                 VStack {
-                    TextField("Enter any number", text: $number)
-                        .multilineTextAlignment(.center)
+                    TextInputField(placeHolder: "Enter any number" , textValue: $number)
                         .keyboardType(.numberPad)
-                    //   Spacer()
-                    NavigationLink(destination: DetailView(num: number), label: {
+                        .multilineTextAlignment(.leading)
+                     //  Spacer()
+                    NavigationLink(destination: DetailView(num: number, numList: numList ), label: {
                         Text("Search Number")
                             .padding()
                     })
                     .disabled(number == "")
-                    
+
                     Button {
-                       // print("Image tapped!")
                     } label: {
-                        NavigationLink(destination: DetailView(num: random), label: {
+                        NavigationLink(destination: DetailView(num: random, numList: numList), label: {
                             Text("Rundom Number")
                                 .padding()
                         })
@@ -43,11 +43,14 @@ struct ContentView: View {
                 VStack {
                     List {
                         ForEach(numbersList, id: \.id) { nList in
-                            NavigationLink(destination: DetailView(numStory: String( nList.number)), label: {
+                            NavigationLink {
+                                DetailView(numList: nList)
+                            } label: {
                                 Text(nList.detailText)
-                            })
+                            }
                         }
-                    }
+                    }.listStyle(.plain)
+                        .lineLimit(2)
                 }
             }
             .navigationTitle("Numbers")
@@ -60,6 +63,7 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(numList: NumbersModel())
     }
 }
+

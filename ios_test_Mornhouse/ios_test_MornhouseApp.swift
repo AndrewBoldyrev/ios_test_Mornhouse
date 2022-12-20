@@ -11,7 +11,7 @@ import SwiftUI
 struct ios_test_MornhouseApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(numList: NumbersModel())
         }
     }
 }
