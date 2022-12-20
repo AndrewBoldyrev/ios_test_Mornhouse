@@ -15,7 +15,7 @@ When cocoapods is done installing libraries, you will get a terminal readout tha
 
 Follow this instruction and henceforth, **use the workspace** instead of your project.
 
-#Test task for the position of an iOS Developer
+# Test task for the position of an iOS Developer
 
 You need to develop an app on Swift for iOS, “Interesting facts about numbers”. The application should allow the user to enter the number about which he wants to know an interesting fact, as well as - to randomly generate a number and get a fact about it. Application must contain 2 screens.
 
